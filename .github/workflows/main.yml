@@ -20,5 +20,5 @@ jobs:
       - name: Login to Docker Hub
         run: sudo docker login -u pavankagupati2001 -p Pavan@2001
       - name: push image to docker registry
-        run: sudo docker push pavankagupati2001/pavanrepo:nodeapp:v1.1.5
+        run: sudo docker image push pavankagupati2001/pavanrepo:nodeapp:v1.1.5
      
