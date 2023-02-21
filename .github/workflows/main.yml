@@ -1,0 +1,17 @@
+name: My GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        working-directory: fro
+        run: sudo docker build -t nodeapp:v1.1.2 .
