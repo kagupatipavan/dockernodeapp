@@ -18,7 +18,7 @@ jobs:
       - name: run immage
         run: sudo docker run -d -p 3001:1200 nodeapp:v1.1.5
       - name: Login to Docker Hub
-        run: docker login -u pavankagupati2001 -p Pavan@2001
+        run: sudo docker login -u {{secrets.UNAME}} -p {{secrets.PASS}}
       - name: push image to docker registry
-        run: docker push -t nodeapp:v1.1.5
+        run: sudo docker push -t nodeapp:v1.1.5
      
