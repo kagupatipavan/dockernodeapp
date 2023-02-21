@@ -15,4 +15,5 @@ jobs:
       - name: Deploy
         working-directory: new/src
         run: sudo docker build -t nodeapp:v1.1.5 .
+      - name: run immage
         run: sudo docker run -d -p nodeapp:v1.1.5
