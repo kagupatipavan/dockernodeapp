@@ -13,5 +13,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy
-        working-directory: fro
-        run: sudo docker build -t nodeapp:v1.1.2 .
+        working-directory: new
+        run: sudo docker build -t nodeapp:v1.1.4 .
