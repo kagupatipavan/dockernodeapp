@@ -8,18 +8,15 @@ on:
 jobs:
   build:
     runs-on: self-hosted
+    environment: usernmae
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Deploy
         working-directory: new/src
         run: sudo docker build -t nodeapp:v1.1.5 .
-      - name: run immage\
-      
-        run: sudo docker run -d -p 3001:1200 nodeapp:v1.1.5
-      - name: Login to Docker Hub
-        run: sudo docker login -u pavankagupati2001 -p Pavan@2001
+      - name: login to docker hub
+        run: sudo docker login -u ${{secrets.UNAME}} -p ${{secrets.PASS}}
       - name: push image to docker registry
         run: sudo docker push pavankagupati2001/pavanrepo:v1.1.5
      
