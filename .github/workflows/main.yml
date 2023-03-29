@@ -1,9 +1,7 @@
 name: My GitHub Action
 
 on:
-  push:
-    branches:
-      - main
+  workflow-dispatch:
 
 jobs:
   build:
